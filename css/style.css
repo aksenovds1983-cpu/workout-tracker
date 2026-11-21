@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  /* Тёмный градиентный фон */
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  color: #f8fafc;
+  padding: 40px 20px;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 25px;
+  font-size: 32px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+/* Статистика */
+.stats {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  flex: 1;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.stat-value {
+  display: block;
+  font-size: 28px;
+  font-weight: 800;
+  color: #38bdf8; /* Голубой акцент */
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* Форма */
+.workout-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #334155;
+}
+
+.workout-form select,
+.workout-form input {
+  flex: 1;
+  min-width: 140px;
+  padding: 12px 15px;
+  background: #0f172a;
+  color: #f8fafc;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.workout-form select:focus,
+.workout-form input:focus {
+  border-color: #38bdf8;
+}
+
+.workout-form button {
+  padding: 12px 24px;
+  background: #38bdf8;
+  color: #0f172a;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.workout-form button:hover {
+  background: #7dd3fc;
+}
+
+.workout-form button:active {
+  transform: scale(0.98);
+}
+
+/* Список тренировок */
+.workout-list {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.workout-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e293b;
+  padding: 18px 20px;
+  border-radius: 14px;
+  border: 1px solid #334155;
+  transition: transform 0.15s, border-color 0.15s;
+}
+
+.workout-item:hover {
+  transform: translateY(-2px);
+  border-color: #475569;
+}
+
+.workout-info {
+  font-size: 15px;
+  color: #f8fafc;
+}
+
+.workout-info strong {
+  font-size: 16px;
+  color: #38bdf8;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* Кнопка удаления */
+.btn-delete {
+  background: transparent;
+  color: #ef4444;
+  border: 1px solid #ef4444;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-delete:hover {
+  background: #ef4444;
+  color: white;
+}
+
+/* Подсказка */
+.empty-hint {
+  text-align: center;
+  color: #64748b;
+  padding: 40px;
+  font-size: 16px;
+  background: #1e293b;
+  border-radius: 16px;
+  border: 1px dashed #334155;
+}

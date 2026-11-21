@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Трекер тренировок</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>🏋️ Трекер тренировок</h1>
+
+    <!-- Блок со статистикой -->
+    <section class="stats">
+      <div class="stat-card">
+        <span class="stat-value" id="total-count">0</span>
+        <span class="stat-label">Тренировок</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value" id="total-minutes">0</span>
+        <span class="stat-label">Минут</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value" id="total-calories">0</span>
+        <span class="stat-label">Ккал</span>
+      </div>
+    </section>
+
+    <!-- Форма добавления -->
+    <form id="workout-form" class="workout-form">
+      <select id="workout-type" name="type" required>
+        <option value="" disabled selected>Тип тренировки</option>
+        <option value="cardio">Кардио (бег, велосипед)</option>
+        <option value="strength">Силовая (зал)</option>
+      </select>
+
+      <input type="number" id="workout-duration" name="duration" placeholder="Длительность (мин)" min="1" required>
+
+      <input type="date" id="workout-date" name="date" required>
+
+      <button type="submit">Добавить</button>
+    </form>
+
+    <!-- Список тренировок -->
+    <ul id="workout-list" class="workout-list"></ul>
+
+    <!-- Подсказка, если список пуст -->
+    <p class="empty-hint" id="empty-hint">У вас пока нет тренировок. Добавьте первую!</p>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
