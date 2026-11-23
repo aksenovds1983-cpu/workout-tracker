@@ -6,7 +6,14 @@
 
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  
+  /* Картинка + затемняющий градиент поверх неё */
+  background: 
+    linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)),
+    url("../images/gym-bg.jpg") center/cover no-repeat fixed;
+    
+  background-color: #0f172a; 
+  
   color: #f8fafc;
   padding: 20px;
   line-height: 1.5;
@@ -21,12 +28,17 @@ body {
   margin: 0 auto;
   width: 100%;
   position: relative;
+  /* Полупрозрачный тёмный фон для читаемости текста */
+  background: rgba(15, 23, 42, 0.85); 
+  padding: 20px 30px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 /* --- Шапка сайта --- */
 .site-header {
   text-align: center;
-  padding: 40px 0 20px;
+  padding: 20px 0 20px;
   margin-bottom: 20px;
 }
 
@@ -47,8 +59,8 @@ body {
 /* --- Кнопка переключения темы --- */
 .theme-toggle {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 20px;
+  right: 20px;
   background: #1e293b;
   color: #f8fafc;
   border: 1px solid #334155;
@@ -58,6 +70,7 @@ body {
   font-size: 14px;
   font-weight: 600;
   transition: all 0.2s;
+  z-index: 10;
 }
 
 .theme-toggle:hover {
@@ -147,7 +160,7 @@ main {
 
 .workout-form select,
 .workout-form input {
-  flex: 1 1 160px; 
+  flex: 1 1 140px; 
   min-width: 0;
   padding: 12px 15px;
   background-color: #0f172a !important; 
@@ -301,10 +314,6 @@ input[type="number"] {
 
 /* --- Стили для текстовых страниц (О проекте) --- */
 .content-section {
-  background: #1e293b;
-  padding: 30px;
-  border-radius: 16px;
-  border: 1px solid #334155;
   line-height: 1.7;
 }
 
@@ -370,8 +379,14 @@ input[type="number"] {
    СВЕТЛАЯ ТЕМА (применяется при классе на body)
    ========================================= */
 body.light-theme {
+  background-image: none;
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   color: #0f172a;
+}
+
+body.light-theme .container {
+  background: rgba(255, 255, 255, 0.95); 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 body.light-theme .site-header h1 {
@@ -410,13 +425,13 @@ body.light-theme .stat-label {
 }
 
 body.light-theme .workout-form {
-  background: #ffffff;
+  background: #f8fafc;
   border-color: #e2e8f0;
 }
 
 body.light-theme .workout-form select,
 body.light-theme .workout-form input {
-  background-color: #f8fafc !important;
+  background-color: #ffffff !important;
   color: #0f172a !important;
   border-color: #cbd5e1;
 }
@@ -431,7 +446,7 @@ body.light-theme .workout-form button:hover {
 }
 
 body.light-theme .workout-item {
-  background: #ffffff;
+  background: #f8fafc;
   border-color: #e2e8f0;
 }
 
@@ -454,7 +469,7 @@ body.light-theme .btn-delete:hover {
 }
 
 body.light-theme .empty-hint {
-  background: #ffffff;
+  background: #f8fafc;
   border-color: #cbd5e1;
   color: #64748b;
 }
@@ -476,11 +491,6 @@ body.light-theme .theme-toggle {
 
 body.light-theme .theme-toggle:hover {
   background: #f1f5f9;
-}
-
-body.light-theme .content-section {
-  background: #ffffff;
-  border-color: #e2e8f0;
 }
 
 body.light-theme .content-section h2 {
