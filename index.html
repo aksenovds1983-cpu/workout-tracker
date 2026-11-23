@@ -7,9 +7,27 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <main class="container">
-    <h1>🏋️ Трекер тренировок</h1>
+  
+  <!-- Шапка сайта -->
+  <header class="site-header">
+    <div class="container">
+      <!-- Кнопка переключения темы -->
+      <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">☀️ Светлая</button>
+      
+      <!-- Меню навигации -->
+      <nav class="main-nav">
+        <a href="index.html" class="active">Главная (Трекер)</a>
+        <a href="about.html">О проекте</a>
+      </nav>
 
+      <h1>🏋️ Трекер тренировок</h1>
+      <p class="subtitle">Ваш личный дневник для учёта активности, подсчёта калорий и контроля прогресса.</p>
+    </div>
+  </header>
+
+  <!-- Основной контент -->
+  <main class="container">
+    
     <!-- Блок со статистикой -->
     <section class="stats">
       <div class="stat-card">
@@ -46,8 +64,18 @@
 
     <!-- Подсказка, если список пуст -->
     <p class="empty-hint" id="empty-hint">У вас пока нет тренировок. Добавьте первую!</p>
+    
   </main>
 
+  <!-- Подвал сайта -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Трекер тренировок.</p>
+      <p>Автор: <strong>Аксенов Дмитрий</strong></p>
+    </div>
+  </footer>
+
+  <!-- Подключение JS-модуля -->
   <script type="module" src="js/main.js"></script>
 </body>
 </html>
