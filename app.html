@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Трекер — Трекер тренировок</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <header class="site-header">
+    <div class="container">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">☀️ Светлая</button>
+      
+      <nav class="main-nav">
+        <a href="index.html">Главная</a>
+        <a href="app.html" class="active">Трекер</a>
+        <a href="about.html">О проекте</a>
+      </nav>
+
+      <h1>🏋️ Мой трекер</h1>
+      <p class="subtitle">Записывайте свои тренировки и следите за прогрессом.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <section class="stats">
+      <div class="stat-card">
+        <span class="stat-value" id="total-count">0</span>
+        <span class="stat-label">Тренировок</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value" id="total-minutes">0</span>
+        <span class="stat-label">Минут</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value" id="total-calories">0</span>
+        <span class="stat-label">Ккал</span>
+      </div>
+    </section>
+
+    <form id="workout-form" class="workout-form">
+      <select id="workout-type" name="type" required>
+        <option value="" disabled selected>Тип тренировки</option>
+        <option value="cardio">Кардио (бег, велосипед)</option>
+        <option value="strength">Силовая (зал)</option>
+      </select>
+
+      <input type="number" id="workout-duration" name="duration" placeholder="Длительность (мин)" min="1" required>
+
+      <input type="date" id="workout-date" name="date" required>
+
+      <button type="submit">Добавить</button>
+    </form>
+
+    <ul id="workout-list" class="workout-list"></ul>
+    <p class="empty-hint" id="empty-hint">У вас пока нет тренировок. Добавьте первую!</p>
+    
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Трекер тренировок.</p>
+      <p>Автор: <strong>Аксенов Дмитрий</strong></p>
+    </div>
+  </footer>
+
+  <!-- Подключение основного скрипта приложения (в нем уже есть импорт темы) -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

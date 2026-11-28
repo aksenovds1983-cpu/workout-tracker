@@ -3,71 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Трекер тренировок</title>
+  <title>Главная — Трекер тренировок</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   
-  <!-- Шапка сайта -->
   <header class="site-header">
     <div class="container">
-      <!-- Кнопка переключения темы -->
       <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">☀️ Светлая</button>
       
-      <!-- Меню навигации -->
       <nav class="main-nav">
-        <a href="index.html" class="active">Главная (Трекер)</a>
+        <a href="index.html" class="active">Главная</a>
+        <a href="app.html">Трекер</a>
         <a href="about.html">О проекте</a>
       </nav>
 
       <h1>🏋️ Трекер тренировок</h1>
-      <p class="subtitle">Ваш личный дневник для учёта активности, подсчёта калорий и контроля прогресса.</p>
+      <p class="subtitle">Добро пожаловать на главную страницу проекта.</p>
     </div>
   </header>
 
-  <!-- Основной контент -->
   <main class="container">
-    
-    <!-- Блок со статистикой -->
-    <section class="stats">
-      <div class="stat-card">
-        <span class="stat-value" id="total-count">0</span>
-        <span class="stat-label">Тренировок</span>
-      </div>
-      <div class="stat-card">
-        <span class="stat-value" id="total-minutes">0</span>
-        <span class="stat-label">Минут</span>
-      </div>
-      <div class="stat-card">
-        <span class="stat-value" id="total-calories">0</span>
-        <span class="stat-label">Ккал</span>
+    <section class="content-section" style="text-align: center; min-height: 40vh; display: flex; flex-direction: column; justify-content: center;">
+      <h2>Здесь скоро что-то будет!</h2>
+      <p>Мы работаем над наполнением главной страницы.</p>
+      <div class="cta-box" style="margin-top: 20px;">
+        <a href="app.html" class="btn-primary">Перейти к тренировкам</a>
       </div>
     </section>
-
-    <!-- Форма добавления -->
-    <form id="workout-form" class="workout-form">
-      <select id="workout-type" name="type" required>
-        <option value="" disabled selected>Тип тренировки</option>
-        <option value="cardio">Кардио (бег, велосипед)</option>
-        <option value="strength">Силовая (зал)</option>
-      </select>
-
-      <input type="number" id="workout-duration" name="duration" placeholder="Длительность (мин)" min="1" required>
-
-      <input type="date" id="workout-date" name="date" required>
-
-      <button type="submit">Добавить</button>
-    </form>
-
-    <!-- Список тренировок -->
-    <ul id="workout-list" class="workout-list"></ul>
-
-    <!-- Подсказка, если список пуст -->
-    <p class="empty-hint" id="empty-hint">У вас пока нет тренировок. Добавьте первую!</p>
-    
   </main>
 
-  <!-- Подвал сайта -->
   <footer class="site-footer">
     <div class="container">
       <p>&copy; 2026 Трекер тренировок.</p>
@@ -75,7 +40,10 @@
     </div>
   </footer>
 
-  <!-- Подключение JS-модуля -->
-  <script type="module" src="js/main.js"></script>
+  <!-- Подключение модуля темы -->
+  <script type="module">
+    import { initTheme } from './js/theme.js';
+    initTheme();
+  </script>
 </body>
 </html>
